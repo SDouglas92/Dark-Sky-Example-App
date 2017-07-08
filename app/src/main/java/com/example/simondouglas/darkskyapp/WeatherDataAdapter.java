@@ -33,7 +33,7 @@ class WeatherDataAdapter extends ArrayAdapter<WeatherData> {
 
         TextView timeView = (TextView) weatherItemView.findViewById(R.id.timeView);
         ImageView weatherIconView = (ImageView) weatherItemView.findViewById(R.id.weatherIconView);
-        TextView summaryView = (TextView) weatherItemView.findViewById(R.id.summaryView);
+        TextView summaryView = (TextView) weatherItemView.findViewById(R.id.deatilsSummaryView);
         TextView tempView = (TextView) weatherItemView.findViewById(R.id.temperatureView);
 
         Date date = new Date(Long.parseLong(currentData.getTime()));

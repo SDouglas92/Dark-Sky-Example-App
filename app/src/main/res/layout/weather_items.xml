@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="onListItemClick">
 
     <TextView
         android:id="@+id/timeView"
@@ -18,7 +19,7 @@
         tools:layout_editor_absoluteY="222dp" />
 
     <TextView
-        android:id="@+id/summaryView"
+        android:id="@+id/deatilsSummaryView"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:text="TextView"
@@ -41,6 +42,6 @@
         android:layout_height="50dp"
         app:srcCompat="@color/colorPrimary"
         tools:layout_editor_absoluteY="222dp"
-        app:layout_constraintRight_toLeftOf="@+id/summaryView"
+        app:layout_constraintRight_toLeftOf="@+id/deatilsSummaryView"
         android:layout_marginRight="32dp" />
 </android.support.constraint.ConstraintLayout>

@@ -143,7 +143,7 @@ class GenerateMockData {
         dataList.add(data6);
     }
 
-    public ArrayList generateData() {
+    public ArrayList<WeatherData> generateData() {
         return dataList;
     }
 }
