@@ -14,6 +14,7 @@ class WeatherData {
     private String temperature;
     private String precipitation;
     private String feelLikeTemperature;
+    private String windSpeed;
     
     public WeatherData(HashMap<String, String> data) {
         time = data.get("time");
@@ -22,6 +23,7 @@ class WeatherData {
         temperature = data.get("temperature");
         precipitation = data.get("precipitation");
         feelLikeTemperature = data.get("apparentTemperature");
+        windSpeed = data.get("windSpeed");
     }
 
     public String getTime() {
@@ -46,5 +48,9 @@ class WeatherData {
 
     public String getFeelLikeTemperature() {
         return feelLikeTemperature;
+    }
+
+    public String getWindSpeed() {
+        return windSpeed;
     }
 }
