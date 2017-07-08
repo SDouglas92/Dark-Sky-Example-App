@@ -3,7 +3,6 @@ package com.example.simondouglas.darkskyapp;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import static org.junit.Assert.*;
@@ -58,5 +57,15 @@ public class WeatherDataTest {
     @Test
     public void canGetIconType() {
         assertEquals(data1.get("icon"), weatherData.getIcon());
+    }
+
+    @Test
+    public void canGetTemperature() {
+        assertEquals(data1.get("temperature"), weatherData.getTemperature());
+    }
+
+    @Test
+    public void canGetPrecipitation() {
+        assertEquals(data1.get("precipitation"), weatherData.getPrecipitation());
     }
 }

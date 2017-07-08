@@ -11,11 +11,15 @@ class WeatherData {
     private String time;
     private String summary;
     private String icon;
+    private String temperature;
+    private String precipitation;
     
     public WeatherData(HashMap<String, String> data) {
         time = data.get("time");
         summary = data.get("summary");
         icon = data.get("icon");
+        temperature = data.get("temperature");
+        precipitation = data.get("precipitation");
     }
 
     public String getTime() {
@@ -28,5 +32,13 @@ class WeatherData {
 
     public String getIcon() {
         return icon;
+    }
+
+    public String getTemperature() {
+        return temperature;
+    }
+
+    public String getPrecipitation() {
+        return precipitation;
     }
 }
