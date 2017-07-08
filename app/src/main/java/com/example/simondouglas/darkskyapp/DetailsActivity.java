@@ -40,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
         timeView.setText(dateFormat.format(date));
         summaryView.setText(weatherData.getSummary());
         temperatureView.setText(weatherData.getTemperature());
-        precipitationView.setText(weatherData.getPrecipitation());
+        precipitationView.setText(weatherData.getPrecipitationProbability());
         feelsLikeView.setText(weatherData.getFeelLikeTemperature());
         windSpeedView.setText(weatherData.getWindSpeed());
         windBearingView.setText(weatherData.getWindBearing());

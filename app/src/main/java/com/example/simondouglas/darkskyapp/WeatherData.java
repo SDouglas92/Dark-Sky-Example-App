@@ -13,7 +13,8 @@ class WeatherData implements Serializable {
     private String summary;
     private String icon;
     private String temperature;
-    private String precipitation;
+    private String precipitationProbability;
+    private String precipitationType;
     private String feelLikeTemperature;
     private String windSpeed;
     private String windBearing;
@@ -23,7 +24,8 @@ class WeatherData implements Serializable {
         summary = data.get("summary");
         icon = data.get("icon");
         temperature = data.get("temperature");
-        precipitation = data.get("precipitation");
+        precipitationProbability = data.get("precipProbability");
+        precipitationType = data.get("precipType");
         feelLikeTemperature = data.get("apparentTemperature");
         windSpeed = data.get("windSpeed");
         windBearing = data.get("windBearing");
@@ -45,8 +47,12 @@ class WeatherData implements Serializable {
         return temperature;
     }
 
-    public String getPrecipitation() {
-        return precipitation;
+    public String getPrecipitationProbability() {
+        return precipitationProbability;
+    }
+
+    public String getPrecipitationType() {
+        return precipitationType;
     }
 
     public String getFeelLikeTemperature() {

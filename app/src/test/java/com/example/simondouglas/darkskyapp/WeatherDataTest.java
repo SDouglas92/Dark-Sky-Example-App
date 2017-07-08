@@ -20,6 +20,7 @@ public class WeatherDataTest {
         put("icon", "partly-cloudy-day");
         put("precipIntensity", "0");
         put("precipProbability", "0");
+        put("precipType", "rain");
         put("temperature", "14.34");
         put("apparentTemperature", "14.34");
         put("dewPoint", "9.12");
@@ -66,7 +67,12 @@ public class WeatherDataTest {
 
     @Test
     public void canGetPrecipitation() {
-        assertEquals(data1.get("precipitation"), weatherData.getPrecipitation());
+        assertEquals(data1.get("precipProbability"), weatherData.getPrecipitationProbability());
+    }
+
+    @Test
+    public void canGetPrecipType() {
+        assertEquals(data1.get("precipType"), weatherData.getPrecipitationType());
     }
 
     @Test
