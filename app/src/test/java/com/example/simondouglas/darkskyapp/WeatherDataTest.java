@@ -68,4 +68,9 @@ public class WeatherDataTest {
     public void canGetPrecipitation() {
         assertEquals(data1.get("precipitation"), weatherData.getPrecipitation());
     }
+
+    @Test
+    public void canGetFeelsLikeTemperature() {
+        assertEquals(data1.get("apparentTemperature"), weatherData.getFeelLikeTemperature());
+    }
 }
