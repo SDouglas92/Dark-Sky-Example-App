@@ -54,4 +54,9 @@ public class WeatherDataTest {
     public void canGetSummary() {
         assertEquals(data1.get("summary"), weatherData.getSummary());
     }
+
+    @Test
+    public void canGetIconType() {
+        assertEquals(data1.get("icon"), weatherData.getIcon());
+    }
 }
