@@ -9,12 +9,18 @@ import java.util.HashMap;
 class WeatherData {
     
     private String time;
+    private String summary;
     
     public WeatherData(HashMap<String, String> data) {
         time = data.get("time");
+        summary = data.get("summary");
     }
 
     public String getTime() {
         return time;
+    }
+
+    public String getSummary() {
+        return summary;
     }
 }

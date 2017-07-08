@@ -49,4 +49,9 @@ public class WeatherDataTest {
     public void canGetTime() {
         assertEquals(data1.get("time"), weatherData.getTime());
     }
+
+    @Test
+    public void canGetSummary() {
+        assertEquals(data1.get("summary"), weatherData.getSummary());
+    }
 }
