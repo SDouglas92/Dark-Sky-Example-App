@@ -1,12 +1,13 @@
 package com.example.simondouglas.darkskyapp;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
 /**
  * Created by simondouglas on 08/07/2017.
  */
 
-class WeatherData {
+class WeatherData implements Serializable {
     
     private String time;
     private String summary;

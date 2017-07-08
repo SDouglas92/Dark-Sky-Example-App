@@ -44,6 +44,8 @@ class WeatherDataAdapter extends ArrayAdapter<WeatherData> {
         summaryView.setText(currentData.getSummary());
         tempView.setText(currentData.getTemperature());
 
+        weatherItemView.setTag(currentData);
+
         return weatherItemView;
     }
 
