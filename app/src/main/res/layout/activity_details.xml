@@ -4,69 +4,110 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
         android:id="@+id/detailsTimeView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/deatilsSummaryView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="64dp" />
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/detailsTimeView"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.668" />
 
     <TextView
         android:id="@+id/deatilsTemperatureView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="104dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="75dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="64dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsWeatherIconView" />
 
     <TextView
         android:id="@+id/detailsPrecipitationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="136dp" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="71dp"
+        app:layout_constraintTop_toBottomOf="@+id/detailsFeelsLikeView" />
 
     <TextView
         android:id="@+id/detailsFeelsLikeView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="136dp" />
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deatilsTemperatureView"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/detailsWindSpeedView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="136dp" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        android:layout_marginTop="76dp"
+        app:layout_constraintTop_toBottomOf="@+id/detailsPrecipitationView" />
 
     <TextView
         android:id="@+id/detailsWindBearingView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="209dp" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.718"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toTopOf="@+id/detailsWindSpeedView" />
 
     <ImageView
         android:id="@+id/detailsWeatherIconView"
         android:layout_width="59dp"
         android:layout_height="38dp"
         app:srcCompat="@color/colorAccent"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="64dp" />
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="102dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/deatilsSummaryView" />
+
 </android.support.constraint.ConstraintLayout>

@@ -9,11 +9,13 @@
 
     <TextView
         android:id="@+id/timeView"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/weatherIconView"
         tools:layout_editor_absoluteY="222dp" />
@@ -22,19 +24,21 @@
         android:id="@+id/deatilsSummaryView"
         android:layout_width="70dp"
         android:layout_height="50dp"
+        android:layout_marginRight="22dp"
         android:text="TextView"
-        tools:layout_editor_absoluteY="222dp"
+        android:textAlignment="center"
         app:layout_constraintRight_toLeftOf="@+id/temperatureView"
-        android:layout_marginRight="22dp" />
+        tools:layout_editor_absoluteY="222dp" />
 
     <TextView
         android:id="@+id/temperatureView"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteY="222dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="222dp" />
 
     <ImageView
         android:id="@+id/weatherIconView"

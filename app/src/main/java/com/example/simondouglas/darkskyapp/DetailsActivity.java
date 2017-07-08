@@ -3,10 +3,13 @@ package com.example.simondouglas.darkskyapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static android.text.TextUtils.concat;
 
 /**
  * Created by simondouglas on 08/07/2017.
@@ -36,14 +39,21 @@ public class DetailsActivity extends AppCompatActivity {
         Date date = new Date(Long.parseLong(weatherData.getTime()));
         SimpleDateFormat dateFormat = new SimpleDateFormat("H:mm");
 
-
         timeView.setText(dateFormat.format(date));
         summaryView.setText(weatherData.getSummary());
-        temperatureView.setText(weatherData.getTemperature());
-        precipitationView.setText(weatherData.getPrecipitationProbability());
-        feelsLikeView.setText(weatherData.getFeelLikeTemperature());
-        windSpeedView.setText(weatherData.getWindSpeed());
+        temperatureView.setText(concat(weatherData.getTemperature(), "C"));
+        feelsLikeView.setText(concat(weatherData.getFeelLikeTemperature(), "C"));
+        windSpeedView.setText(concat(weatherData.getWindSpeed(), "mph"));
         windBearingView.setText(weatherData.getWindBearing());
+
+        if (weatherData.getPrecipitationType() == null) {
+            precipitationView.setVisibility(View.GONE);
+        } else {
+            Double precipProb = Double.parseDouble(weatherData.getPrecipitationProbability());
+            Double precentage = precipProb * 100;
+
+            precipitationView.setText(concat(precentage.toString(), "% of ", weatherData.getPrecipitationType()));
+        }
 
     }
 
