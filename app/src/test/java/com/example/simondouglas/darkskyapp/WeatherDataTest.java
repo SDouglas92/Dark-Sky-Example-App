@@ -78,4 +78,9 @@ public class WeatherDataTest {
     public void canGetWindSpeed() {
         assertEquals(data1.get("windSpeed"), weatherData.getWindSpeed());
     }
+
+    @Test
+    public void canGetWindBearing() {
+        assertEquals(data1.get("windBearing"), weatherData.getWindBearing());
+    }
 }
